@@ -1,0 +1,119 @@
+<html>
+
+<head>
+    <title>Form homework</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: Nunito;
+            font-size: 14px;
+        }
+
+        h1 {
+            display: block;
+            text-align: center;
+            margin: 15px;
+            font-size: 16px;
+        }
+
+        .container {
+            width: 400px;
+            margin: 15px auto 15px auto;
+        }
+
+        .fieldset {
+            margin: 10px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            margin: 3px;
+        }
+
+        .textInput {
+            padding: 3px 7px 3px 7px;
+            width: 100%;
+        }
+
+        .radioButton {
+            margin: 4px;
+        }
+
+        .legend {
+            font-weight: bold;
+            text-align: 10px;
+        }
+
+        button {
+            width: 100px;
+            margin: auto;
+            display: block;
+            padding: 3px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="h1">Buy cinema tickets:</h1>
+
+    <div class="container">
+        <form action="" method="POST">
+            <fieldset class="fieldset">
+                <legend class="legend">Contact details</legend>
+
+                <label for="firstName">First name:</label>
+                <input class="textInput" type="text" id="firstName" name="firstName" placeholder="First name" />
+
+                <label for="lastName">Last name:</label>
+                <input class="textInput" type="text" id="lastName" name="lastName" placeholder="Last name" />
+
+                <label for="email">Email:</label>
+                <input class="textInput" type="email" id="email" name="email" placeholder="Email" />
+
+                <label for="phone">Phone:</label>
+                <input class="textInput" type="tel" name="phone" id="phone" placeholder="Phone" />
+            </fieldset>
+
+            <fieldset class="fieldset">
+                <legend class="legend">Choose a movie</legend>
+                <div>
+                    <label><input class="radioButton" type="radio" name="movies" value="aladin" checked>Aladin</label>
+                    <label><input class="radioButton" type="radio" name="movies" value="avengers">Avengers</label>
+                    <label><input class="radioButton" type="radio" name="movies" value="godzilla">Godzilla</label>
+                    <label><input class="radioButton" type="radio" name="movies" value="rocketman">Rocketman</label>
+                    <label><input class="radioButton" type="radio" name="movies" value="spider-man">Spider-man</label>
+                </div>
+            </fieldset>
+
+            <fieldset class="fieldset">
+                <legend class="legend">Choose location</legend>
+
+                <label for="location">
+                    <select name="location" id="location">
+                        <option value="Cinema City - Iulius">Cinema City - Iulius</option>
+                        <option value="Cinema City - Vivo">Cinema City - Vivo</option>
+                    </select>
+                </label>
+            </fieldset>
+
+            <fieldset class="fieldset">
+                <legend class="legend">Terms and conditions</legend>
+
+                <label><input type="checkbox" name="termsAndConditions" value="termsAndConditions"
+                        requiredplaceholder="">Accept terms
+                    and
+                    conditions</label>
+            </fieldset>
+
+            <br>
+
+            <button type="submit">Buy Tickets</button>
+        </form>
+    </div>
+</body>
+
+</html>

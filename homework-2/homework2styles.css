@@ -1,0 +1,100 @@
+* {
+    font-family: Montserrat;
+}
+
+.checkMark {
+    width: 40px;
+    height: 32px;
+    object-fit: contain;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.box {
+    width: 390px;
+    height: 464px;
+    border-radius: 6px;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    display: block;
+    position: relative;
+    margin-top: 130px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.welcomeBack {
+    width: 191px;
+    height: 29px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #000000;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.logInToContinue {
+    width: 152px;
+    height: 19px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #9d9d9d;
+    position: absolute;
+    margin-top: 67px;
+    margin-left: 30px;
+}
+
+.emailInput, .password {
+    font-size: 16px;
+    font-weight: 600;
+    position: absolute;
+    margin-left: 30px;
+    border: none;
+    border-bottom: solid 2px #eaeaea;
+    width: 330px;
+    padding-bottom: 9px;
+}
+
+.emailInput {
+    margin-top: 137px;    
+}
+
+.emailInput:focus, .password:focus {
+    outline: none;
+    border: none;
+    border-bottom: solid 2px #4255d8;
+
+}
+
+.password {
+    margin-top: 205px;
+}
+
+.forgotPassword {
+    position: absolute;
+    margin-top: 263px;
+    margin-left: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #4255d8;
+}
+
+.signInButton {
+    display: block;
+    position: relative;
+    margin-top : 331px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 330px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: #4255d8;
+    font-weight: 600;
+    font-size: 16px;
+    color: #ffffff;
+    border: none;
+}
+body {
+    background: #f2f3f8
+}

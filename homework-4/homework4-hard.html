@@ -1,0 +1,156 @@
+<html>
+  <head>
+    <title>Homework4- hard. Clock</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .clock {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        max-width: 100vw;
+        max-height: 100vh;
+        transform: scale(0.4);
+      }
+
+      .clockCenter {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        background-color: #000;
+        z-index: 1000;
+        float: left;
+        position: absolute;
+      }
+
+      .clockSecondHand,
+      .clockMinuteHand,
+      .clockHourHand {
+        border: 1px solid black;
+        box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.75);
+        transform-origin: center bottom;
+        position: absolute;
+      }
+
+      .clockSecondHand {
+        height: 400px;
+        width: 8px;
+        background-color: red;
+        z-index: 999;
+        margin-top: -200px;
+        animation: secondHandRotate 5s infinite linear;
+      }
+
+      @keyframes secondHandRotate {
+        0% {
+          transform: none;
+        }
+
+        25% {
+          /* transform: rotate(90deg);
+          transform: translate(200, 200); */
+          transform: rotate(90deg);
+        }
+
+        50% {
+          /* transform: rotate(180deg); */
+          transform: rotate(180deg);
+        }
+
+        75% {
+          /* transform: rotate(270deg); */
+          transform: rotate(270deg);
+        }
+
+        100% {
+          /* transform: rotate(360deg); */
+          transform: rotate(360deg);
+        }
+      }
+
+      .clockMinuteHand {
+        height: 450px;
+        width: 12px;
+        background-color: blue;
+        z-index: 998;
+        margin-top: -225px;
+        transform: rotate(-60deg);
+        animation: minuteHandRotate 5s infinite linear;
+      }
+
+      @keyframes minuteHandRotate {
+        0% {
+          transform: rotate(-60deg);
+        }
+
+        25% {
+          transform: rotate(30deg);
+        }
+
+        50% {
+          transform: rotate(120deg);
+        }
+
+        75% {
+          transform: rotate(210deg);
+        }
+
+        100% {
+          transform: rotate(300deg);
+        }
+      }
+
+      .clockHourHand {
+        height: 350px;
+        width: 15px;
+        background-color: brown;
+        z-index: 997;
+        margin-top: -175px;
+        transform: rotate(30deg);
+        animation: hourHandRotate 1s infinite linear;
+      }
+
+      @keyframes hourHandRotate {
+        0% {
+          transform: rotate(30deg);
+        }
+
+        25% {
+          transform: rotate(120deg);
+        }
+
+        50% {
+          transform: rotate(210deg);
+        }
+
+        75% {
+          transform: rotate(300deg);
+        }
+
+        100% {
+          transform: rotate(390deg);
+
+          /* Aici nu stiu de ce dar nu merge cu "transform: rotate(30deg)"  */
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="clock">
+      <img
+        clas="clockFace"
+        src="https://clipartart.com/images/11-55-digital-clocks-clipart-4.jpg"
+        alt="No image :("
+      />
+
+      <div class="clockCenter"></div>
+      <div class="clockSecondHand"></div>
+      <div class="clockMinuteHand"></div>
+      <div class="clockHourHand"></div>
+    </div>
+  </body>
+</html>

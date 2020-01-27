@@ -17,10 +17,11 @@
       }
 
       .clockCenter {
-        height: 30px;
-        width: 30px;
+        height: 38px;
+        width: 38px;
         border-radius: 50%;
-        background-color: #000;
+        background-color: rgb(97, 56, 68);
+        box-shadow: 0px 0px 5px 5px rgb(0, 0, 0);
         z-index: 1000;
         position: absolute;
       }
@@ -29,8 +30,7 @@
       .clockMinuteHand,
       .clockHourHand {
         border: 5px solid black;
-        border-radius: 7px;
-        /* box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.75); */
+        border-radius: 10px;
         transform-origin: center bottom;
         position: absolute;
       }
@@ -38,8 +38,8 @@
       .clockSecondHand {
         height: 500px;
         width: 8px;
-        background-color: green;
-        border: 5px solid rgb(40, 94, 29);
+        background-color: rgb(245, 0, 0);
+        border: 5px solid rgb(95, 46, 46);
         z-index: 999;
         margin-top: -250px;
         animation: secondHandRotate 60s steps(15) infinite;

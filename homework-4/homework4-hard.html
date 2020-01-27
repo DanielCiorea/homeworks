@@ -22,26 +22,27 @@
         border-radius: 50%;
         background-color: #000;
         z-index: 1000;
-        float: left;
         position: absolute;
       }
 
       .clockSecondHand,
       .clockMinuteHand,
       .clockHourHand {
-        border: 1px solid black;
-        box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.75);
+        border: 5px solid black;
+        border-radius: 7px;
+        /* box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.75); */
         transform-origin: center bottom;
         position: absolute;
       }
 
       .clockSecondHand {
-        height: 400px;
+        height: 500px;
         width: 8px;
-        background-color: red;
+        background-color: green;
+        border: 5px solid rgb(40, 94, 29);
         z-index: 999;
-        margin-top: -200px;
-        animation: secondHandRotate 5s infinite linear;
+        margin-top: -250px;
+        animation: secondHandRotate 60s steps(15) infinite;
       }
 
       @keyframes secondHandRotate {
@@ -50,35 +51,30 @@
         }
 
         25% {
-          /* transform: rotate(90deg);
-          transform: translate(200, 200); */
           transform: rotate(90deg);
         }
 
         50% {
-          /* transform: rotate(180deg); */
           transform: rotate(180deg);
         }
 
         75% {
-          /* transform: rotate(270deg); */
           transform: rotate(270deg);
         }
 
         100% {
-          /* transform: rotate(360deg); */
           transform: rotate(360deg);
         }
       }
 
       .clockMinuteHand {
-        height: 450px;
+        height: 500px;
         width: 12px;
-        background-color: blue;
+        background-color: rgb(90, 90, 116);
         z-index: 998;
-        margin-top: -225px;
+        margin-top: -250px;
         transform: rotate(-60deg);
-        animation: minuteHandRotate 5s infinite linear;
+        animation: minuteHandRotate 3600s infinite linear;
       }
 
       @keyframes minuteHandRotate {
@@ -106,11 +102,11 @@
       .clockHourHand {
         height: 350px;
         width: 15px;
-        background-color: brown;
+        background-color: #333;
         z-index: 997;
         margin-top: -175px;
         transform: rotate(30deg);
-        animation: hourHandRotate 1s infinite linear;
+        animation: hourHandRotate 43200s infinite linear;
       }
 
       @keyframes hourHandRotate {

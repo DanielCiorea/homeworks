@@ -15,9 +15,8 @@
         <h3>Celsius to Fahrenheit converter</h3>
         <input type="number" id="celsiusInput" placeholder="Celsius"/> <br>
         <input type="button" value="Convert to Fahrenheit" onclick="convertCelsiusToFahrenheit()"/>
-
-
     </form>
+
     <script>
       function convertMetersToInches() {
         var meters = document.getElementById("metersInput").value;
@@ -34,7 +33,6 @@
           console.log(meters + " meters are " + Math.round(inches * 100) / 100 + " inches.");
         }
       }
-
 
       function convertCelsiusToFahrenheit() {
           var celsius = document.getElementById("celsiusInput").value;

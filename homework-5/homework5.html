@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Homework5</title>
+  </head>
+
+  <body>
+    <form action="">
+        <h3>Meters to inches converter</h3>
+        <input type="number" id="metersInput" placeholder="Meters"/> <br>
+        <input type="button" value="Convert to Inches" onclick="convertMetersToInches()"/>
+
+        <br>
+        <br>
+
+        <h3>Celsius to Fahrenheit converter</h3>
+        <input type="number" id="celsiusInput" placeholder="Celsius"/> <br>
+        <input type="button" value="Convert to Fahrenheit" onclick="convertCelsiusToFahrenheit()"/>
+
+
+    </form>
+    <script>
+      function convertMetersToInches() {
+        var meters = document.getElementById("metersInput").value;
+        var inches = meters / 0.0254;
+        if (meters == 1) {
+          console.log(meters + " meter is " + Math.round(inches * 100) / 100 + " inches.");
+        } 
+        
+        else if (inches == 1) {
+          console.log(meters + " meters are " + Math.round(inches * 100) / 100 + " inch.");
+        } 
+        
+        else {
+          console.log(meters + " meters are " + Math.round(inches * 100) / 100 + " inches.");
+        }
+      }
+
+
+      function convertCelsiusToFahrenheit() {
+          var celsius = document.getElementById("celsiusInput").value;
+          var fahrenheit = celsius * 1.8 + 32;
+          console.log(celsius + "℃ is " + fahrenheit + "℉")
+      }
+    </script>
+  </body>
+</html>

@@ -6,12 +6,12 @@
   <body>
     <script>
       function dayGreetings() {
-        var day = new Date();
-        var hour = day.getHours();
+        var currentDay = new Date();
+        var currentHour = currentDay.getHours();
 
-        if (hour < 12) {
+        if (currentHour < 12) {
           console.log("Good morning!");
-        } else if (12 <= hour && hour < 18) {
+        } else if (12 <= currentHour && currentHour < 18) {
           console.log("Good afternoon!");
         } else {
           console.log("Good evening!");

@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Christmas tree</title>
+  </head>
+
+  <body>
+    <script>
+      function christmasTree(treeSize) {
+        var totalSpaces = " ".repeat(treeSize);
+        var stars = "*";
+        treeSize = treeSize - 1;
+
+        for (var i = 0; i <= treeSize; i++) {
+          for (var j = 0; j < i; j++) {
+            totalSpaces = totalSpaces.slice(1);
+            if (totalSpaces != "") {
+              console.log(totalSpaces + stars);
+              stars += "**";
+            }
+          }
+        }
+        var totalSpaces = " ".repeat(treeSize);
+        console.log(stars);
+        console.log(totalSpaces + "*");
+      }
+
+      christmasTree(4);
+    </script>
+  </body>
+</html>

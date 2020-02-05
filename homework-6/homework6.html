@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Homework 6</title>
+  </head>
+
+  <body>
+    <script>
+      for (var i = 0; i < 101; i += 3) {
+        if (i !== 0) {
+          console.log(i);
+        }
+      }
+
+      //   Could be done with modulo also ->
+
+      /*  for (var i = 0; i < 101; i++) {
+          if (i % 3 === 0 && i !== 0) {
+              console.log(i);
+          }
+      } */
+
+      function sumBetweenMinAndMax(a, b) {
+        var i = a + 1;
+        var sum = a;
+        while (i <= b) {
+          sum += i;
+          i++;
+        }
+        console.log(sum);
+      }
+
+      sumBetweenMinAndMax(6, 9);
+    </script>
+  </body>
+</html>

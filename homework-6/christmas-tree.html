@@ -8,7 +8,6 @@
       function christmasTree(treeSize) {
         var totalSpaces = " ".repeat(treeSize);
         var stars = "*";
-        treeSize = treeSize - 1;
 
         for (var i = 0; i <= treeSize; i++) {
           for (var j = 0; j < i; j++) {
@@ -19,12 +18,12 @@
             }
           }
         }
-        var totalSpaces = " ".repeat(treeSize);
+        var totalSpaces = " ".repeat(treeSize - 1);
         console.log(stars);
         console.log(totalSpaces + "*");
       }
 
-      christmasTree(4);
+      christmasTree(6);
     </script>
   </body>
 </html>

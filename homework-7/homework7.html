@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title>Homework 7</title>
+  </head>
+  <body>
+    <script>
+      //   Part 1
+
+      //   Write a function that takes as an arguments an array of numbers and returns the sum of the positive numbers.
+      //   For example: For the array [-2, 10, 2, 4, -6, 3] it must return 10 + 2 + 4 + 3 which is 19.
+
+      function arraySum(array) {
+        let sum = 0;
+        for (var i = 0; i < array.length; i++) {
+          if (array[i] > 0) {
+            sum += array[i];
+          }
+        }
+        return sum;
+      }
+
+      var array = [-2, 10, 2, 4, -6, 3];
+
+      console.log(arraySum(array));
+
+      // Part 2
+
+      // Implement an animal object with the following properties: type (e.g. Dog), name (e.g. Rex),
+      // gut (an array of items that the animal ate, e.g. ['Bones', 'Meat']), and the following method:
+      // eat(food) which adds the food the animals gut.
+
+      var animal = {
+        type: "Dog",
+        name: "Rex",
+        gut: ["Bones", "Meat"]
+      };
+
+      function eat(food) {
+        animal.gut.push(food);
+      }
+
+      eat("Varză murată");
+      console.log(animal);
+
+      //   Part 3
+
+      //   Write a function that generates a random name by combining firstNames and lastNames randomly. Start
+      //   from two hardcoded arrays var firstNames = ['John', 'Matthew', 'Thomas', 'Christian', 'David'] and
+      //   var lastNames = ['Smith', 'Pitt', 'Cruise', 'Robinson']. The function should generate a single random
+      //   name like John Cruise, Thomas Smith, David Pitt, Christian Smith, etc.
+
+      var firstNames = ['John', 'Matthew', 'Thomas', 'Christian', 'David'];
+      var lastNames = ['Smith', 'Pitt', 'Cruise', 'Robinson'];
+
+      function randomFirstAndLastName() {
+        var randomFirstName = firstNames[Math.round(Math.random() * (firstNames.length - 1))];
+        var randomLastName = lastNames[Math.round(Math.random() * (lastNames.length - 1))];
+        return randomFirstName + " " + randomLastName;
+      }
+
+      console.log(randomFirstAndLastName());
+    </script>
+  </body>
+</html>

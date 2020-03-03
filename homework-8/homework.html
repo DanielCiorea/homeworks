@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Homework 8</title>
+  </head>
+  <body>
+    <script>
+      //   Basic challenge
+      // Write a function that take a single argument, which is an array. The function will return another array,
+      //   with the same elements, but in a reverse order.
+
+      // For example, given the array [1, 2, 3, 4, 5] the function will return [5, 4, 3, 2, 1]
+
+      // Nice to have: Solve this problem using reduce.
+
+      const reverseArray = arr =>
+        arr.reduce((acc, curValue) => {
+          acc.unshift(curValue);
+          return acc;
+        }, []);
+
+      console.log(reverseArray([1345, 66, 3, 22, 5]));
+
+      //   Hard challenge
+      // Write a function which returns the number of days, hours, minutes and seconds until next year. The function will
+      //   not get any arguments, but will use the exact current date and will return an object like:
+
+      // {
+      // days: 38,
+      // hours: 19,
+      // minutes: 31,
+      // seconds: 8
+      // }
+
+      function timeTillNewYear() {
+        const y2021 = new Date(2021, 0, 0, 0, 0, 0, 0);
+        const now = new Date();
+
+        const timeKeeper = {
+          days: Math.floor((y2021.getTime() - now.getTime()) / 86400000),
+          hours: 23 - now.getHours(),
+          minutes: 59 - now.getMinutes(),
+          seconds: 59 - now.getSeconds()
+        };
+        return timeKeeper;
+      }
+
+      console.log(timeTillNewYear());
+    </script>
+  </body>
+</html>

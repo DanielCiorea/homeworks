@@ -35,11 +35,11 @@
         gut: ["Bones", "Meat"]
       };
 
-      function eat(food) {
-        animal.gut.push(food);
+      function eat(...food) {
+        animal.gut.push(...food);
       }
 
-      eat("Varză murată");
+      eat("Sarmale", "Carnat", "Shaorma");
       console.log(animal);
 
       //   Part 3
